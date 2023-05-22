@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String deviceTokenToSendPushNotification ='';
 
   @override
   void initState() {
@@ -64,9 +65,22 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
+
+
+
+  Future<void> getDeviceTokenToSendNotification() async {
+    final FirebaseMessaging _fcm = FirebaseMessaging.instance;
+    final token = await _fcm.getToken();
+    deviceTokenToSendPushNotification = token.toString();
+    print("Token Value $deviceTokenToSendPushNotification");
+  }
+
+
   @override
   Widget build(BuildContext context) {
+    getDeviceTokenToSendNotification();
     return Scaffold(
+
       appBar: AppBar(
         title: Text("Push Notification"),
       ),

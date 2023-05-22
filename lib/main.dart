@@ -2,7 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/services.dart';
 import 'package:push_notification/notification_pages/home_page.dart';
+import 'package:push_notification/notification_pages/notification_tb/home_screen.dart';
+import 'package:push_notification/sensors/accelerometer_sensor/home_page.dart';
 
 import 'notification_service/local_notification_service.dart';
 
@@ -18,6 +21,10 @@ void main() async {
   LocalNotificationService.initialize();
   //final fcmToken = await FirebaseMessaging.instance.getToken();
  // print("token : $fcmToken");
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ],);
   runApp(const MyApp());
 }
 
@@ -41,7 +48,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: AcceloHomePage(),
     );
   }
 }
