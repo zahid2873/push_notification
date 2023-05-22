@@ -44,6 +44,7 @@ dependencies:
   sensors_plus: ^3.0.1
   geolocator: ^9.0.2
   geocoding:
+  image_picker:
 
 dev_dependencies:
   flutter_test:

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 
+import '../multi_images/multipleImageHome.dart';
+
 class LocationHomePage extends StatefulWidget {
   const LocationHomePage({Key? key}) : super(key: key);
 
@@ -18,6 +20,11 @@ class _LocationHomePageState extends State<LocationHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Location"),
+        actions: [
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MultipleImageSelector()));
+          }, child: Text("Next",style: TextStyle(color: Colors.red)))
+        ],
       ),
       body: Center(
         child: Column(

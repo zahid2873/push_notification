@@ -41,7 +41,7 @@ class _AcceloHomePageState extends State<AcceloHomePage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationHomePage()));
-          }, child: Text("NEXT"))
+          }, child: Text("NEXT",style: TextStyle(color: Colors.red)))
         ],
       ),
       body: Column(

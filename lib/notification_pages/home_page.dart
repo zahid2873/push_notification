@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>AcceloHomePage()));
-          }, child: Text("NEXT"))
+          }, child: Text("NEXT",style: TextStyle(color: Colors.red),))
         ],
       ),
     );

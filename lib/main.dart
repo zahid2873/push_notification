@@ -8,6 +8,7 @@ import 'package:push_notification/notification_pages/home_page.dart';
 import 'package:push_notification/notification_pages/notification_tb/home_screen.dart';
 import 'package:push_notification/sensors/accelerometer_sensor/home_page.dart';
 
+import 'multi_images/multipleImageHome.dart';
 import 'notification_service/local_notification_service.dart';
 
 Future<void> backgroundHandler(RemoteMessage message) async {
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LocationHomePage(),
+      home: HomePage(),
     );
   }
 }
