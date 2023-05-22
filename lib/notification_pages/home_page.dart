@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:push_notification/notification_pages/demo_page.dart';
 
 import '../notification_service/local_notification_service.dart';
+import '../sensors/accelerometer_sensor/home_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -83,6 +84,11 @@ class _HomePageState extends State<HomePage> {
 
       appBar: AppBar(
         title: Text("Push Notification"),
+        actions: [
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>AcceloHomePage()));
+          }, child: Text("NEXT"))
+        ],
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
+import 'package:push_notification/location/location_home.dart';
 import 'package:push_notification/notification_pages/home_page.dart';
 import 'package:push_notification/notification_pages/notification_tb/home_screen.dart';
 import 'package:push_notification/sensors/accelerometer_sensor/home_page.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: AcceloHomePage(),
+      home: LocationHomePage(),
     );
   }
 }

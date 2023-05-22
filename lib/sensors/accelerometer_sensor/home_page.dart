@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
+import '../../location/location_home.dart';
+
 class AcceloHomePage extends StatefulWidget {
   const AcceloHomePage({Key? key}) : super(key: key);
 
@@ -36,6 +38,11 @@ class _AcceloHomePageState extends State<AcceloHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Sensors"),
+        actions: [
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationHomePage()));
+          }, child: Text("NEXT"))
+        ],
       ),
       body: Column(
         children: [
